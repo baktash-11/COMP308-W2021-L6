@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <!--CSS Section -->
+  <link rel="stylesheet" type="" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="" href="/bootstrap-icons/font/bootstrap-icons.css">
+
+  <link rel='stylesheet' href='/css/style.css' />
+
+
+</head>
+
+
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--change the navebar location/direction (class navebar-nave ml, mr or me -->
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+            <% if(title == "Home"){ %>
+            <li class="nav-item active">
+            <% }else { %>
+            <li class="nav-item">
+            <% } %>
+              <!-- nave-link active > is for making the link brither -->
+              <a class="nav-link " aria-current="page" href="/"><i class="fa fa-home "></i>Home </a>
+            </li>
+
+             <% if(title == "Products"){ %>
+            <li class="nav-item active">
+            <% }else { %>
+            <li class="nav-item">
+            <% } %>
+              <a class="nav-link" href="/products"><i class="fa fa-credit-card"></i>Products</a>
+            </li>
+
+            <% if(title == "Services"){ %>
+            <li class="nav-item active">
+            <% }else { %>
+            <li class="nav-item">
+            <% } %>
+              <a class="nav-link" href="/services"><i class="fa fa-500px"></i>Services</a>
+            </li>
+
+            <% if(title == "Contact"){ %>
+            <li class="nav-item active">
+            <% }else { %>
+            <li class="nav-item">
+            <% } %>
+              <a class="nav-link" href="/contact"><i class="fa fa-tty"></i>Contact</a>
+            </li>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
