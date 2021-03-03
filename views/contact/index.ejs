@@ -33,7 +33,7 @@
                     <!--button for delete the contact-->
                     <td class="text-center">
                         <a href="/contact-list/delete/<%= contactList[count]._id%>" 
-                            class="btn btn-outline-danger bi bi-trash-fill"> &nbsp;Delete</a>
+                            class="btn btn-outline-danger bi bi-trash-fill" onclick="if (!confirm('Are you sure?')) { return false }"> &nbsp;Delete</a>
                         
                     </td>
 
