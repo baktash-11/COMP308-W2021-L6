@@ -16,12 +16,27 @@
                     <th class="text-center" id=''>First Name</th>
                     <th class="text-center" id=''>Last Name</th>
                     <th class="text-center" id=''>Age</th>
+                    <th class="text-center" id=''></th>
+                    <th class="text-center" id=''></th>
                 </tr>
                 <% for(let count =0; count <contactList.length; count++){%>
                 <tr>
                     <td class="text-center"><%=contactList[count].fName %></td>
                     <td class="text-center"><%=contactList[count].lName %></td>
                     <td class="text-center"><%=contactList[count].age %></td>
+                    <!--button for update/edit-->
+                    <td class="text-center">
+                        <a href="/contact-list/edit/<%= contactList[count]._id%>" 
+                            class="btn btn-outline-primary bi bi-pencil-square"> &nbsp;Edit</a>
+                        
+                    </td>
+                    <!--button for delete the contact-->
+                    <td class="text-center">
+                        <a href="/contact-list/delete/<%= contactList[count]._id%>" 
+                            class="btn btn-outline-danger bi bi-trash-fill"> &nbsp;Delete</a>
+                        
+                    </td>
+
                 </tr>
 
                 <%}%>

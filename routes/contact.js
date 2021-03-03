@@ -67,5 +67,49 @@ router.post('/add',(req, res, next) => {
 
 });
 
+//GET request to show Edit page 
+router.get('/edit/:id',(req, res, next)=>{
+    let id =req.params.id;
+    contactModel.findById(id, (err, contactObject)=>{
+        if(err){
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            //sow edit page
+           res.render('contact/edit', {
+            title: 'Edit Contact', 
+               contact: contactObject
+           });
+
+            
+        }
+            
+    });
+    console.log(id);
+});
+
+// post req - update the database with data from database
+router.post('/edit/:id', (req, res, next)=>{
+    let id = req.params.id;
+    let updatedContact = contactModel({
+        "_id": id, 
+        "fName": req.body.fName, 
+        "lName": req.body.lName,
+        "age":req.body.age
+    });
+    contactModel.update({_id:id}, updatedContact, (err)=>{
+        if(err){
+            console.log(err)
+            res.end(err);
+        }
+        else
+        {
+            res.redirect('/contact-list');
+        }
+    })
+});
+
 module.exports = router;
 
