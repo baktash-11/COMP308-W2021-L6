@@ -1,36 +1,23 @@
 let express = require('express');
 let router = express.Router();
 
-// GET home page.
-router.get('/', function (req, res, next) {
-  //gose to index and inject the title into index.ejs
-  res.render('index', { title: 'Home' });
-});
-
+let indexController = require('../controllers/index');
 
 // GET home page.
-router.get('/about', function (req, res, next) {
-  //gose to index and inject the title into index.ejs
-  res.render('index', { title: 'About' });
-});
+router.get('/', indexController.displayHomePage);
+
+
+// GET About page page.
+router.get('/about',indexController.displayAboutPage);
 
 // GET products page.
-router.get('/products', function (req, res, next) {
-  //gose to index and inject the title into index.ejs
-  res.render('index', { title: 'Products' });
-});
+router.get('/products',indexController.displayProductPage );
 
 // GET services page.
-router.get('/services', function (req, res, next) {
-  //gose to index and inject the title into index.ejs
-  res.render('index', { title: 'Services' });
-});
+router.get('/services', indexController.displayServicesPage );
 
 // GET contact page.
-router.get('/contact', function (req, res, next) {
-  //gose to index and inject the title into index.ejs
-  res.render('index', { title: 'Contact' });
-});
+router.get('/contact',indexController.displayContactPage);
 
 
 module.exports = router;
