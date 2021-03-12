@@ -7,7 +7,7 @@
             <br>
             <h1><%= title %></h1>
             <!--button to add new contact -->
-            <a href="/contact-list/add" class="btn alert-danger bi bi-person-plus-fill">&nbsp;New Contact</a>
+            <a href="/contact-list/add" class="btn alert-primary bi bi-person-plus-fill">&nbsp;New Contact</a>
             <br><br>
             
             <table class="table table-bordered table-striped table-hover" >
@@ -28,13 +28,13 @@
                     <!--button for update/edit-->
                     <td class="text-center">
                         <a href="/contact-list/edit/<%= contactList[count]._id%>" 
-                            class="btn btn-outline-primary bi bi-pencil-fill"> &nbsp;Edit</a>
+                            class="btn alert-primary bi bi-pencil-fill"> &nbsp;Edit</a>
                         
                     </td>
                     <!--button for delete the contact-->
                     <td class="text-center">
                         <a href="/contact-list/delete/<%= contactList[count]._id%>" 
-                            class="btn btn-outline-danger bi bi-trash-fill" onclick="if (!confirm('Are you sure?')) { return false }"> &nbsp;Delete</a>
+                            class="btn alert-danger bi bi-trash-fill" onclick="if (!confirm('Are you sure?')) { return false }"> &nbsp;Delete</a>
                         
                     </td>
 
