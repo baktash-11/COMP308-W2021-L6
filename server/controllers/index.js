@@ -26,3 +26,19 @@ module.exports.displayServicesPage=(req, res, next)=> {
     res.render('index', { title: 'Services' });
 };
 
+module.exports.displayLoginPage=(req, res, next)=>{
+    //TDO
+}
+module.exports.processLoginPage=(req, res, next)=>{
+    //TDO
+}
+module.exports.displayRegisterPage=(req, res, next)=>{
+    //TDO
+}
+module.exports.processRegistePage=(req, res, next)=>{
+    //TDO
+}
+module.exports.performLogout=(req, res, next)=>{
+    //TDO
+}
+
