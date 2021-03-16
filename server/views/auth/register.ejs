@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-offset-4 col-md-4">
              <h1>Registration Page</h1>
-             <form method="POST">
+             <form method="POST" autocomplete="off">
                  
 
                 <fieldset class="form-group">
@@ -21,7 +21,7 @@
 
                 <fieldset class="form-group">
                     <label for="password">Password</label>
-                    <input type="text" class="form-control" 
+                    <input type="password" class="form-control" 
                     name ="password" placeholder="Enter Password" 
                     id="password" required>
                 </fieldset>
@@ -38,15 +38,19 @@
                     <input type="text" class="form-control" 
                     name ="displayName" placeholder="Enter Display Name" 
                     id="displayName" required>
+                    <br>
+                    or
+                    <a href="/login">Aready Registered</a>
                 </fieldset>
 
                 
 
-                <fieldset class="form-group" text-right>
+                <fieldset class="form-group text-right" >
                     <input type="submit" class="btn btn-success" value="Submit">
                     <a href="/">
-                        <input type="button" value="Class" class="btn btn-warning">
+                        <input type="button" value="Cancel" class="btn btn-warning">
                     </a>
+                  
                 </fieldset>
              </form>
          </div>
